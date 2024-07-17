@@ -1,5 +1,8 @@
-document.addEventListener("DOMContentLoaded", function() {
-  const observer = new IntersectionObserver((entries) => {
+document.addEventListener('DOMContentLoaded', function () {
+  const faq = document.querySelector('.FAQ');
+  const about = document.querySelector('.about');
+
+  const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         entry.target.classList.add('visible');
@@ -7,7 +10,6 @@ document.addEventListener("DOMContentLoaded", function() {
     });
   }, { threshold: 0.1 });
 
-  document.querySelectorAll('.fade-in').forEach(section => {
-    observer.observe(section);
-  });
+  observer.observe(faq);
+  observer.observe(about);
 });
