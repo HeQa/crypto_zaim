@@ -111,6 +111,9 @@ li {
   font-size: var(--font-size);
 }
 
+.about {
+  margin: 100px 0;
+}
 
 .about-content {
   border-radius: 30px;
@@ -126,9 +129,9 @@ li {
 }
 
 #bg-wrap {
-  height: 1250px;
+  height: 1000px;
   filter: blur(100px);
-  padding: 0;
+
 }
 
 .about, .FAQ {
@@ -164,6 +167,7 @@ li {
 #long-card {
   width: 900px;
   height: 300px;
+  margin: 50px auto;
   display: flex;
 }
 
@@ -208,7 +212,7 @@ li {
   background-size: cover;
   padding-top: 100px;
   padding-bottom: 100px;
-  height: 450px;
+  height: 600px;
 
 }
 .faq-content {
