@@ -46,6 +46,7 @@ body {
   display: flex;
   justify-content: center;
   padding: 1.5rem;
+
 }
 
 .logo-holder {
@@ -156,7 +157,7 @@ li {
 }
 
 .about-card {
-  width: 300px;
+  width: 30%;
   background: #00000065;
   border-radius: 20px;
   transition: transform 0.5s;
@@ -165,7 +166,7 @@ li {
 }
 
 #long-card {
-  width: 900px;
+  width: 90%;
   height: 300px;
   margin: 50px auto;
   display: flex;
