@@ -217,8 +217,8 @@ li {
 #tg-btn, #web-btn {
   color: rgb(155, 245, 222);
   border: none;
-  width: 15rem;
-  height: 6rem;
+  width: 10em;
+  height: 3em;
   border-radius: 30px;
   font-weight: 700;
   font-size: 20px;
