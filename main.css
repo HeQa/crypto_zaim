@@ -6,6 +6,8 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   margin: 0;
+  display: flex;
+  flex-direction: column;
   font-family: -apple-system, BlinkMacSystemFont, "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", Arial, sans-serif;
   overflow-y: auto;
   animation: fadeIn 2s ease-out;
@@ -13,15 +15,17 @@ body {
 
 .container {
   height: 100vh;
+  flex: 1;
 }
 
 .wrap {
+  width: 50%;
   padding: 30px;
   border: 1px solid rgba(255, 255, 255, 0.356);
   border-radius: 50px;
-
   box-shadow: 0 8px 32px 0 rgba(255, 255, 255, 0.37);
   display: flex;
+  justify-content: center;
 }
 
 /* @keyframes shadows {
@@ -78,7 +82,6 @@ h2:hover {
 
 .logo {
   width: 60px;
-  border-radius: 50%;
 }
 
 .menu {
@@ -119,23 +122,22 @@ li {
 .about-content {
   box-shadow: 0 8px 32px 0 rgba(102, 99, 99, 0.37);
   border-radius: 30px;
-  background-color: rgba(170, 170, 170, 0.315); /* Black w/opacity/see-through */
+  background-color: rgba(170, 170, 170, 0.315);
   font-weight: bold;
+  /* 
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%); */
+
   z-index: 2;
   width: 80%;
+  margin: 100px auto;
+  padding-bottom: 50px;
 }
 
-#bg-wrap {
-  height: 1000px;
-  filter: blur(100px);
-
-}
-
-.about, .FAQ {
+.about,
+.FAQ {
   transform: translateY(20px);
   opacity: 0;
   transition: opacity 1s ease-out, transform 1s ease-out;
@@ -161,7 +163,7 @@ li {
   background: #00000065;
   border-radius: 20px;
   transition: transform 0.5s;
-  --font-size: 16px;
+  --font-size: 24px;
   box-shadow: 0 8px 32px 0 rgb(0, 0, 0);
 }
 
@@ -170,6 +172,7 @@ li {
   height: 300px;
   margin: 50px auto;
   display: flex;
+  justify-content: center;
 }
 
 .about-card:hover {
@@ -203,7 +206,6 @@ li {
 .about3,
 .about4 {
   margin: 50px;
-
 }
 
 .buttons {
@@ -215,7 +217,8 @@ li {
   width: 50%;
 }
 
-#tg-btn, #web-btn {
+#tg-btn,
+#web-btn {
   color: rgb(155, 245, 222);
   border: none;
   width: 10em;
@@ -235,6 +238,7 @@ li {
   background-color: #30e0ff4b;
   transform: scale(1.3) perspective(1px)
 }
+
 #web-btn:hover {
   background-color: #30e0ff4b;
   transform: scale(1.3) perspective(1px)
@@ -248,11 +252,15 @@ li {
   padding-top: 100px;
   padding-bottom: 100px;
   height: 600px;
-
+  width: 80%;
+  margin: 0 auto;
 }
+
 .faq-content {
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
+  background-color: rgb(0, 0, 0);
+  /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4);
+  /* Black w/opacity/see-through */
   color: white;
   font-weight: bold;
   border: 3px solid #f1f1f1;
@@ -265,18 +273,21 @@ li {
   padding: 20px;
   text-align: center;
 }
+
 .faq-wrapper {
   /* background: #00000065; */
   border-radius: 20px;
   transition: transform 0.5s;
-  --font-size: 16px;
+  --font-size: 24px;
   margin: 5% 15%;
 }
+
 .faq {
   list-style: none;
   padding: 0;
-  margin: 0 auto;
+  margin: 100px auto;
 }
+
 /* .faq hr {
   border-color: rgba(0, 58, 184, 0.288);
 } */
@@ -284,15 +295,18 @@ li {
   border-radius: 20px;
   transition: background-color 0.5s;
 }
+
 .faq-item:hover {
   background-color: rgba(0, 0, 0, 0.363);
 }
+
 .faq-question {
   cursor: pointer;
   padding: 15px;
   display: block;
   position: relative;
 }
+
 .faq-answer {
   max-height: 0;
   overflow: hidden;
@@ -300,20 +314,53 @@ li {
   padding: 0 15px;
   border-top: none;
 }
+
 input[type="checkbox"] {
   display: none;
 }
-input[type="checkbox"]:checked ~ .faq-answer {
-  max-height: 1000px; /* Set a large enough value to accommodate the content */
+
+input[type="checkbox"]:checked~.faq-answer {
+  max-height: 1000px;
+  /* Set a large enough value to accommodate the content */
   padding: 15px;
 }
 
-
-
-
 footer {
+  color: white;
+  background-color: #00000079;
+  width: 100%;
   height: 10%;
   text-align: center;
+  display: flex;
+  justify-content: space-around;
+  font-size: 24px;
+}
+
+.social-media {
+  margin: auto 0;
+}
+
+.tg {
+  display: flex;
+  align-items: center;
+}
+
+.tg-png {
+  width: 35px;
+}
+
+.x {
+  display: flex;
+  align-items: center;
+}
+
+.x-png {
+  width: 35px;
+}
+
+
+.terms {
+  margin: auto 0;
 }
 
 @keyframes glow {
@@ -428,4 +475,21 @@ footer {
     top: -100vh;
     opacity: 0;
   }
+}
+
+#bg {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: -1;
+}
+
+#bg canvas {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
 }
