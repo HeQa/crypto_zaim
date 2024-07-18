@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
   const faq = document.querySelector('.FAQ');
   const about = document.querySelector('.about');
 
@@ -12,9 +12,23 @@ document.addEventListener('DOMContentLoaded', function() {
 
   observer.observe(faq);
   observer.observe(about);
+
+  const faqItems = document.querySelectorAll('.faq-item input[type="checkbox"]');
+
+  faqItems.forEach(item => {
+    item.addEventListener('change', function () {
+      if (this.checked) {
+        faqItems.forEach(otherItem => {
+          if (otherItem !== this) {
+            otherItem.checked = false;
+          }
+        });
+      }
+    });
+  });
 });
 
-(function($) {
+(function ($) {
   var canvas = $('#bg').children('canvas'),
     background = canvas[0],
     foreground1 = canvas[1],
@@ -51,7 +65,7 @@ document.addEventListener('DOMContentLoaded', function() {
       window.webkitRequestAnimationFrame ||
       window.msRequestAnimationFrame ||
       window.oRequestAnimationFrame ||
-      function(callback, element) {
+      function (callback, element) {
         setTimeout(callback, 1000 / 60);
       };
 
@@ -62,17 +76,17 @@ document.addEventListener('DOMContentLoaded', function() {
       window.oCancelAnimationFrame ||
       clearTimeout;
 
-    var setCanvasHeight = function() {
+    var setCanvasHeight = function () {
       wWidth = $(window).width();
       wHeight = $(window).height();
 
-      canvas.each(function() {
+      canvas.each(function () {
         this.width = wWidth;
         this.height = wHeight;
       });
     };
 
-    var drawCircle = function(x, y, radius, color, alpha) {
+    var drawCircle = function (x, y, radius, color, alpha) {
       var gradient = fctx1.createRadialGradient(x, y, radius, x, y, 0);
       gradient.addColorStop(0, 'rgba(' + color[0] + ',' + color[1] + ',' + color[2] + ',' + alpha + ')');
       gradient.addColorStop(1, 'rgba(' + color[0] + ',' + color[1] + ',' + color[2] + ',' + (alpha - 0.1) + ')');
@@ -83,7 +97,7 @@ document.addEventListener('DOMContentLoaded', function() {
       fctx1.fill();
     };
 
-    var drawLine = function(x, y, width, color, alpha) {
+    var drawLine = function (x, y, width, color, alpha) {
       var endX = x + M.sin(degree) * width,
         endY = y - M.cos(degree) * width,
         gradient = fctx2.createLinearGradient(x, y, endX, endY);
@@ -99,7 +113,7 @@ document.addEventListener('DOMContentLoaded', function() {
       fctx2.stroke();
     };
 
-    var drawBack = function() {
+    var drawBack = function () {
       bctx.clearRect(0, 0, wWidth, wHeight);
 
       var gradient = [];
@@ -133,7 +147,7 @@ document.addEventListener('DOMContentLoaded', function() {
       bctx.fillRect(0, 0, wWidth, wHeight);
     };
 
-    var animate = function() {
+    var animate = function () {
       var sin = M.sin(degree),
         cos = M.cos(degree);
 
@@ -202,7 +216,7 @@ document.addEventListener('DOMContentLoaded', function() {
       timer = requestAnimationFrame(animate);
     };
 
-    var createItem = function() {
+    var createItem = function () {
       circles = [];
       lines = [];
 
@@ -241,11 +255,11 @@ document.addEventListener('DOMContentLoaded', function() {
       drawBack();
     };
 
-    $(document).ready(function() {
+    $(document).ready(function () {
       setCanvasHeight();
       createItem();
     });
-    $(window).resize(function() {
+    $(window).resize(function () {
       setCanvasHeight();
       createItem();
     });
