@@ -201,6 +201,20 @@ li {
   .logo-text {
     font-size: 15px;
   }
+  
+}
+@media (max-width: 1500px) {
+
+  .card-holder {
+    display: inline;
+  }
+  .about-card {
+    width: 90%;
+    height: 300px;
+    margin: 50px auto;
+    display: flex;
+    justify-content: center;
+  }
 }
 
 .about1,
