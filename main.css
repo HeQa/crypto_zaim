@@ -140,7 +140,7 @@ li {
 
 .about,
 .FAQ {
-  transform: translateY(20px);
+  transform: translateY(40px);
   opacity: 0;
   transition: opacity 1s ease-out, transform 1s ease-out;
   text-align: center;
@@ -480,6 +480,8 @@ footer {
 }
 
 #bg {
+  border: 1px solid #ffffff;
+  border-radius: 100px;
 	position: fixed;
 	top: 0;
 	left: 0;
@@ -489,6 +491,8 @@ footer {
 }
 
 #bg canvas {
+  box-shadow: 0 8px 32px 0 rgba(255, 255, 255, 0.37);
+  border-radius: 100px;
 	position: absolute;
 	top: 0;
 	left: 0;
