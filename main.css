@@ -30,24 +30,6 @@ body {
   justify-content: center;
 }
 
-/* @keyframes shadows {
-  0% {
-    text-shadow: #ffffff 0 0 10px;
-  }
-
-  50% {
-    text-shadow: rgb(255, 255, 255) 0 0 10px;
-  }
-
-  75% {
-    text-shadow: rgb(255, 255, 255) 0 0 10px;
-  }
-
-  100% {
-    text-shadow: #ffffff 0 0 10px;
-  }
-} */
-
 .header {
   display: flex;
   justify-content: center;
@@ -75,15 +57,15 @@ h2 {
   font-size: 25px;
   color: #fff;
   transition: color 0.75s, text-decoration-color 0.75s, font-size 0.75s;
+  transition: text-shadow 0.3s linear;
 }
 
 h2:hover {
-  font-size: 27px;
-  animation: shadows 2s infinite;
+  text-shadow: rgb(255, 255, 255) 0 0 10px;
 }
 
 .logo {
-  width: 60px;
+  width: 5vw;
 }
 
 .menu {
@@ -102,10 +84,12 @@ h2:hover {
   margin-left: 3rem;
   text-decoration: none;
   color: #fff;
-  font-size: 1.5em;
+  /* font-size: 1.5em; */
   /* animation: glow 1s ease-in-out infinite alternate; */
   font-weight: 700;
   transition: text-shadow 0.3s linear;
+
+  white-space: nowrap; 
 }
 
 .table a:hover {
@@ -163,7 +147,8 @@ li {
 }
 
 .about-card {
-  width: 30%;
+  width: 30vw;
+  height: 45vh;
   background: #00000065;
   border-radius: 20px;
   transition: transform 0.5s;
@@ -172,8 +157,8 @@ li {
 }
 
 #long-card {
-  width: 90%;
-  height: 300px;
+  width: 60vw;
+  height: 45vh;
   margin: 50px auto;
   display: flex;
   justify-content: center;
@@ -183,29 +168,20 @@ li {
   transform: scale(1.05);
 }
 
-@media (max-width: 900px) {
-
-  .about-card,
-  .FAQ,
-  .faq-item {
-    --font-size: 12px;
-    /* Smaller font size when parent width is <= 135px */
-  }
-
-  h2 {
-    font-size: var(--font-size);
-  }
-
-  .table a {
-    font-size: 16px;
-    margin-left: 2rem;
-  }
-
-  .logo-text {
-    font-size: 15px;
-  }
-  
+.table a,
+h2,
+.logo-text {
+  font-size: 2vw;
 }
+
+.about-card,
+#long-card,
+.social-media,
+.terms,
+.faq-item {
+  font-size: 1.3vw;
+}
+
 @media (max-width: 1500px) {
 
   .card-holder {
@@ -231,20 +207,19 @@ li {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  margin: 50px 15%;
-  max-width: 70%
+  margin: 50px auto;
+  width: 50vw;
 }
 
 #tg-btn,
 #web-btn {
-  max-width: 100%;
+  width: 15vw;
+  height: 6vh;
   color: rgb(155, 245, 222);
   border: none;
-
-  height: 3em;
   border-radius: 30px;
   font-weight: 700;
-  font-size: 20px;
+  font-size: 1.3vw;
   cursor: pointer;
   text-shadow: #13f7ff 0 0 10px;
   background-color: #00000079;
@@ -348,35 +323,26 @@ footer {
   color: white;
   background-color: #00000079;
   width: 100%;
-  height: 10%;
+  height: 15%;
   text-align: center;
   display: flex;
   justify-content: space-around;
-  font-size: 1em;
 }
 
 .social-media {
   margin: auto 0;
 }
 
-.tg {
-  display: flex;
-  align-items: center;
-}
-
-.tg-png {
-  width: 35px;
-}
-
+.tg,
 .x {
   display: flex;
   align-items: center;
 }
 
+.tg-png,
 .x-png {
-  width: 35px;
+  width: 4vw;
 }
-
 
 .terms {
   margin: auto 0;
