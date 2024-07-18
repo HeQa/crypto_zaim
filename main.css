@@ -140,15 +140,16 @@ li {
 
 .card-holder {
   display: flex;
-  margin: 50px 0px;
+
   justify-content: center;
   flex-wrap: wrap;
   gap: 20px;
 }
 
 .about-card {
-  width: 30vw;
-  height: 45vh;
+  margin-top: 50px;
+  width: 40vw;
+  height: 35vh;
   background: #00000065;
   border-radius: 20px;
   transition: transform 0.5s;
@@ -157,11 +158,11 @@ li {
 }
 
 #long-card {
-  width: 60vw;
-  height: 45vh;
-  margin: 50px auto;
+  width: 40vw;
+  height: 35vh;
   display: flex;
-  justify-content: center;
+  align-items: center;
+  margin: 70px auto;
 }
 
 .about-card:hover {
@@ -188,8 +189,6 @@ h2,
     display: inline;
   }
   .about-card {
-    width: 90%;
-    height: 300px;
     margin: 50px auto;
     display: flex;
     justify-content: center;
