@@ -147,9 +147,10 @@ li {
 }
 
 .about-card {
+  align-items: center;
   margin-top: 50px;
   width: 40vw;
-  height: 35vh;
+  height: 23vw;
   background: #00000065;
   border-radius: 20px;
   transition: transform 0.5s;
@@ -159,7 +160,7 @@ li {
 
 #long-card {
   width: 40vw;
-  height: 35vh;
+  height: 23vw;
   display: flex;
   align-items: center;
   margin: 70px auto;
@@ -171,6 +172,7 @@ li {
 
 .table a,
 h2,
+h1,
 .logo-text {
   font-size: 2vw;
 }
