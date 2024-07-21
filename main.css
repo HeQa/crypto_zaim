@@ -22,7 +22,7 @@ body {
 
 .wrap {
   width: 100%;
-  padding: 30px;
+  padding: 2vw;
   border: 1px solid rgba(255, 255, 255, 0.356);
   border-radius: 50px;
   box-shadow: 0 8px 32px 0 rgba(255, 255, 255, 0.37);
@@ -33,8 +33,7 @@ body {
 .header {
   display: flex;
   justify-content: center;
-  padding: 1.5rem;
-
+  padding: 1.5vw;
 }
 
 .logo-holder {
@@ -44,7 +43,6 @@ body {
 }
 
 .logo-text {
-  font-size: 20px;
   font-weight: 700;
   color: #fff;
 }
@@ -53,14 +51,13 @@ h1 {
   color: #fff;
 }
 
-h2 {
-  font-size: 25px;
+h2, h1 {
   color: #fff;
   transition: color 0.75s, text-decoration-color 0.75s, font-size 0.75s;
   transition: text-shadow 0.3s linear;
 }
 
-h2:hover {
+h2:hover, h1:hover {
   text-shadow: rgb(255, 255, 255) 0 0 10px;
 }
 
@@ -81,7 +78,7 @@ h2:hover {
 }
 
 .table a {
-  margin-left: 3rem;
+  margin-left: 3vw;
   text-decoration: none;
   color: #fff;
   /* font-size: 1.5em; */
@@ -103,25 +100,23 @@ li {
 }
 
 .about {
-  margin: 100px 0;
-  padding: 10px 0;
+  width: 100%;
+  padding: 2vw;
+  display: flex;
+  justify-content: center;
+  border-radius: 10px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
 }
 
 .about-content {
+  width: 80%;
+  position: relative;
   box-shadow: 0 8px 32px 0 rgba(102, 99, 99, 0.37);
-  border-radius: 30px;
+  border-radius: 5vw;
   background-color: rgba(170, 170, 170, 0.315);
   font-weight: bold;
-  /* 
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%); */
-
-  z-index: 2;
-  width: 80%;
-  margin: 100px auto;
-  padding-bottom: 50px;
+  overflow: hidden;
+  margin: 4vh auto;
 }
 
 .about,
@@ -129,8 +124,6 @@ li {
   transform: translateY(40px);
   opacity: 0;
   transition: opacity 1s ease-out, transform 1s ease-out;
-  text-align: center;
-  font-size: 20px;
 }
 
 .visible {
@@ -139,31 +132,26 @@ li {
 }
 
 .card-holder {
+  width: 100%;
   display: flex;
-
+  flex-direction: column;
   justify-content: center;
-  flex-wrap: wrap;
-  gap: 20px;
+  align-items: center;
+  gap: 2vh;
 }
 
 .about-card {
-  align-items: center;
-  margin-top: 50px;
   width: 40vw;
-  height: 23vw;
   background: #00000065;
-  border-radius: 20px;
+  border-radius: 2vw;
   transition: transform 0.5s;
-  --font-size: 1em;
   box-shadow: 0 8px 32px 0 rgb(0, 0, 0);
-}
-
-#long-card {
-  width: 40vw;
-  height: 23vw;
   display: flex;
   align-items: center;
-  margin: 70px auto;
+  justify-content: center;
+  text-align: center;
+  padding: 2vh;
+  margin: 1vh 0;
 }
 
 .about-card:hover {
@@ -214,8 +202,8 @@ h1,
 
 #tg-btn,
 #web-btn {
-  width: 15vw;
-  height: 6vh;
+  width: 20vw;
+  height: 8vh;
   color: rgb(155, 245, 222);
   border: none;
   border-radius: 30px;
@@ -465,7 +453,7 @@ footer {
 
 #bg {
   border: 1px solid #ffffff;
-  border-radius: 100px;
+  border-radius: 50px;
 	position: fixed;
 	top: 0;
 	left: 0;
@@ -476,7 +464,7 @@ footer {
 
 #bg canvas {
   box-shadow: 0 8px 32px 0 rgba(255, 255, 255, 0.37);
-  border-radius: 100px;
+  border-radius: 50px;
 	position: absolute;
 	top: 0;
 	left: 0;
