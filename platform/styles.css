@@ -137,7 +137,7 @@ a {
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
 }
 
-.feature-item h2 {
+/* .feature-item h2 {
     font-size: 1.8em;
     margin-bottom: 15px;
     color: #ffffff;
@@ -147,7 +147,7 @@ a {
 .feature-item p {
     font-size: 1em;
     color: #b0bec5;
-}
+} */
 
 .footer {
     background-color: #1e1e1e;
