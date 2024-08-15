@@ -136,6 +136,7 @@ li {
 .card-holder {
   width: 100%;
   display: flex;
+  flex-direction: column; 
   justify-content: center;
   align-items: center;
   gap: 2vh;
@@ -163,7 +164,7 @@ li {
 h2,
 h1,
 .logo-text {
-  font-size: 2vw;
+  font-size: 1.5vw;
 }
 
 .about-card,
@@ -171,7 +172,7 @@ h1,
 .social-media,
 .terms,
 .faq-item {
-  font-size: 2vw;
+  font-size: 1.5vw;
 }
 
 @media (max-width: 1500px) {
